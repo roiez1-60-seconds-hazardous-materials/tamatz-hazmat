@@ -259,6 +259,7 @@ function NavBar({ activeSection, scrollTo }) {
     { id: "analysis", label: "ניתוח מקצועי" },
     { id: "simulation", label: "סימולציה" },
     { id: "tech", label: "פערים" },
+    { id: "docs", label: "מסמכים" },
   ];
 
   return (
@@ -869,6 +870,62 @@ function TechGapsSection() {
   );
 }
 
+function DocumentsSection() {
+  const docs = [
+    {
+      icon: "📊",
+      title: "מצגת — גיבוש תמ\"צ באירועי חומ\"ס",
+      desc: "מצגת מקצועית הכוללת מודל שלושת הצירים, דשבורד מידע חובה, מנגנון הניתוח המקצועי וסגירת פערים טכנולוגיים.",
+      pdfLink: "/presentation.pdf",
+      downloadLink: "/presentation.pptx",
+      pdfLabel: "צפייה (PDF)",
+      downloadLabel: "הורדה (PPTX)"
+    }
+  ];
+
+  return (
+    <section id="docs" className="section">
+      <h2 className="section-title">מסמכים להורדה</h2>
+      <p className="section-subtitle">המצגת המקורית בגרסת צפייה והורדה</p>
+      <div className="divider" />
+
+      <div style={{ maxWidth: 700, margin: "0 auto", display: "flex", flexDirection: "column", gap: 20 }}>
+        {docs.map((doc, i) => (
+          <div key={i} className="card" style={{ cursor: "default", animation: `fadeInUp 0.5s ease-out ${i * 0.15}s both` }}>
+            <div style={{ display: "flex", alignItems: "flex-start", gap: 20 }}>
+              <div style={{
+                width: 64, height: 64, borderRadius: 16,
+                background: "rgba(46,134,193,0.12)", border: "1px solid rgba(46,134,193,0.25)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: 32, flexShrink: 0
+              }}>{doc.icon}</div>
+              <div style={{ flex: 1 }}>
+                <h3 style={{
+                  fontFamily: "var(--font-display)", fontSize: "1.1rem", fontWeight: 700,
+                  color: "var(--blue-light)", marginBottom: 8
+                }}>{doc.title}</h3>
+                <p style={{ fontSize: "0.9rem", color: "var(--gray-300)", lineHeight: 1.7, marginBottom: 16 }}>
+                  {doc.desc}
+                </p>
+                <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                  <a href={doc.pdfLink} target="_blank" rel="noopener noreferrer" className="btn-primary"
+                    style={{ fontSize: "0.9rem", padding: "10px 22px", textDecoration: "none" }}>
+                    📄 {doc.pdfLabel}
+                  </a>
+                  <a href={doc.downloadLink} download className="btn-secondary"
+                    style={{ fontSize: "0.9rem", padding: "10px 22px", textDecoration: "none" }}>
+                    ⬇️ {doc.downloadLabel}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer style={{
@@ -910,7 +967,7 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
-    const sections = ["hero", "axes", "dashboard", "analysis", "simulation", "tech"];
+    const sections = ["hero", "axes", "dashboard", "analysis", "simulation", "tech", "docs"];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(e => {
@@ -941,6 +998,7 @@ export default function Home() {
         <AnalysisSection />
         <SimulationSection />
         <TechGapsSection />
+        <DocumentsSection />
       </main>
       <Footer />
     </>
