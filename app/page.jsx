@@ -941,10 +941,10 @@ function Footer() {
           ס/טפסר רועי צוקרמן | רע״ן חומ״ס ארצי
         </p>
         <div style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap", marginBottom: 24 }}>
-          <a href="mailto:roiez1@gmail.com" style={{
+          <a href="mailto:Roiez@102.gov.il" style={{
             display: "flex", alignItems: "center", gap: 8, color: "var(--gray-300)",
             textDecoration: "none", fontSize: "0.9rem", transition: "color 0.3s"
-          }}>📧 roiez1@gmail.com</a>
+          }}>📧 Roiez@102.gov.il</a>
           <a href="https://chat.whatsapp.com/K4NzcZucmimKYFOXE3VVtD?mode=gi_t"
             target="_blank" rel="noopener noreferrer" style={{
               display: "flex", alignItems: "center", gap: 8, color: "var(--gray-300)",
