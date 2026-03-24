@@ -282,7 +282,7 @@ function HeroSection() {
         }}>
           <span style={{ fontSize: 24 }}>⚠️</span>
           <p style={{ fontSize: "0.95rem", color: "var(--gray-200)", textAlign: "right", lineHeight: 1.7 }}>
-            <strong style={{ color: "var(--red-light)" }}>החלטות שגויות מתחילות במידע חסר.</strong>{" "}
+            <strong style={{ color: "var(--red-light)" }}>תמונת מצב שלמה מתחילה באיסוף מידע מכל הצירים.</strong>{" "}
             איסוף מידע מדויק בזמן אמת הוא הבסיס לשמירה על חיי הלוחמים והצלחת המשימה.
           </p>
         </div>
