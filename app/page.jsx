@@ -625,6 +625,33 @@ function DocumentsSection() {
             style={{ maxWidth: "95vw", maxHeight: "95vh", objectFit: "contain" }} />
         </div>
       )}
+
+      {/* PDF presentation download */}
+      <div style={{
+        maxWidth: 700, margin: "40px auto 0",
+        background: "linear-gradient(145deg, rgba(18,34,64,0.9), rgba(10,22,40,0.95))",
+        border: "1px solid rgba(255,255,255,0.08)", borderRadius: 16, padding: "24px 28px",
+        display: "flex", alignItems: "center", gap: 20
+      }}>
+        <div style={{
+          width: 56, height: 56, borderRadius: 14,
+          background: "rgba(196,30,42,0.12)", border: "1px solid rgba(196,30,42,0.25)",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          fontSize: 28, flexShrink: 0
+        }}>📊</div>
+        <div style={{ flex: 1 }}>
+          <h4 style={{ fontFamily: "var(--font-display)", fontSize: "1rem", fontWeight: 700, color: "var(--white)", marginBottom: 4 }}>
+            מצגת — גיבוש תמ״צ באירועי חומ״ס
+          </h4>
+          <p style={{ fontSize: "0.85rem", color: "var(--gray-400)", marginBottom: 0 }}>
+            המצגת המלאה לצפייה והורדה
+          </p>
+        </div>
+        <a href="/presentation.pdf" target="_blank" rel="noopener noreferrer" className="btn-primary"
+          style={{ fontSize: "0.85rem", padding: "10px 20px", textDecoration: "none", whiteSpace: "nowrap" }}>
+          📄 צפייה / הורדה
+        </a>
+      </div>
     </section>
   );
 }
