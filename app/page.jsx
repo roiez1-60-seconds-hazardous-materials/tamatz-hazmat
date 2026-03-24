@@ -528,12 +528,12 @@ function AnalysisSection() {
         <div style={{ display: "flex", gap: 12, marginTop: 24 }}>
           <button className="btn-secondary" onClick={() => setActiveStep(Math.max(0, activeStep - 1))}
             style={{ opacity: activeStep === 0 ? 0.3 : 1 }} disabled={activeStep === 0}>
-            ← הקודם
+            הקודם →
           </button>
           <button className="btn-primary" onClick={() => setActiveStep(Math.min(ANALYSIS_STEPS.length - 1, activeStep + 1))}
             style={{ opacity: activeStep === ANALYSIS_STEPS.length - 1 ? 0.3 : 1 }}
             disabled={activeStep === ANALYSIS_STEPS.length - 1}>
-            הבא →
+            ← הבא
           </button>
         </div>
       </div>
